@@ -12,6 +12,7 @@ naming the commit taken and the local edits.
 | `skills/archify` | https://github.com/tt-a1i/archify | tt-a1i (Archify) | MIT | Brand marks and icon data have their own terms: `THIRD_PARTY_NOTICES.md` in the folder. |
 | `skills/video-use` | https://github.com/browser-use/video-use | Browser Use | MIT | Edited: description, key file lookup, no key request in chat. Tests and media left out. |
 | `skills/product-launch-motion` | https://github.com/AbubakrChan/product-launch-motion | Abubakr Chan | MIT for SKILL.md and references | Its `NOTICE` applies. The sample films are not MIT and are not included. |
+| `skills/scroll-craft` | https://github.com/nateherkai/scroll-craft | Nate Herk | MIT | Unchanged copy of plugin 0.3.1. Generated assets through kie.ai are optional and paid; their terms are kie.ai's. |
 | `skills/motion-design` | https://github.com/howseen-ai/claude-motion-design | Howseen AI | MIT | Edited: description. Media its scripts download keeps its own licence. |
 
 ## Upstream plugins listed in the catalogue, not copied

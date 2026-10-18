@@ -24,7 +24,7 @@ always wins over this rule.
 | 0 | a markdown note or file | `write it up`, `as markdown`, `make a note`, `doc it`, `in md` | write markdown; a file when it will be kept |
 | 1 | plain English, about 80% ASD-STE100 | `plain english`, `simple words`, `no jargon`, `ste mode`, `explain simply` | the rules below |
 | 2 | a diagram | `draw a diagram`, `diagram it`, `show the flow`, `map it`, `sketch it` | `archify`; a text diagram inline when no tool can run |
-| 3 | an interactive HTML page | `explain in html`, `make a page`, `html it`, `interactive page`, `build a page` | `answer-me-with-html`, or the host's own page feature |
+| 3 | an interactive HTML page | `explain in html`, `make a page`, `html it`, `interactive page`, `build a page` | `answer-me-with-html` for an answer page; `scroll-craft` for a scroll-driven page in the Apple keynote manner, or a companion page to a video |
 | 4 | an explainer video | `explain as a video`, `make a video`, `video explainer`, `animate it`, `3b1b style` | `video-studio` |
 
 Aliases work in any language the user writes in; match the meaning, not only the exact words. A
@@ -44,7 +44,8 @@ number works too: "level 2" means a diagram.
   sequence, dataflow, lifecycle). Check the result opens and the arrows connect. Above three steps
   or parts, a diagram is the default, not an extra.
 - **Page.** One self-contained HTML file, no outside requests unless the page needs them. Conclusion
-  at the top.
+  at the top. When the page should feel like a product launch, or travel with a video, use
+  `scroll-craft`; it plans the journey and screenshots its own result.
 - **Video.** Load `video-studio`. A video costs real money and minutes; say the length and the
   voice cost before rendering, and use only verified material.
 

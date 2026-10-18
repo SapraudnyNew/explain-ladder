@@ -59,6 +59,7 @@ folder, so a plugin update does not wipe them and the system Python stays untouc
 | `archify` | validated diagrams as standalone HTML, SVG and PNG | [tt-a1i/archify](https://github.com/tt-a1i/archify), MIT |
 | `video-use` | cut real footage by conversation | [browser-use/video-use](https://github.com/browser-use/video-use), MIT |
 | `product-launch-motion` | launch film technique on top of HyperFrames | [AbubakrChan/product-launch-motion](https://github.com/AbubakrChan/product-launch-motion), MIT |
+| `scroll-craft` | scroll-driven landing pages in the Apple keynote manner: scroll scrubs video, pins sections, animates type, and checks itself in a headless browser | [nateherkai/scroll-craft](https://github.com/nateherkai/scroll-craft), MIT |
 | `motion-design` | chunked render and QA technique for long code-only films | [howseen-ai/claude-motion-design](https://github.com/howseen-ai/claude-motion-design), MIT |
 
 Vendored skills keep their own `LICENSE` and notices, and an `UPSTREAM` file with the commit taken

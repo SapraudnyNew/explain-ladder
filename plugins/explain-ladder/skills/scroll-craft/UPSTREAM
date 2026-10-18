@@ -1,0 +1,7 @@
+repo: https://github.com/nateherkai/scroll-craft
+path: plugins/nateherk-design/skills/scroll-craft
+commit: 75d81f74e83692add18cd7a8a8e078b8a887a579
+plugin_version: 0.3.1
+licence: MIT (LICENSE copied from the repository root)
+fetched: 2026-10-18
+local_edits: none
