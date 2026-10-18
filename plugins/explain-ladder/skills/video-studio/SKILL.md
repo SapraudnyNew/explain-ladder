@@ -23,7 +23,8 @@ The craft lives in the tools it calls, so read their skills when you reach their
 
 ## Stage 1. Real footage (only when there are clips)
 
-Use `video-use`. In order: inventory with `ffprobe`, transcribe, cut pauses and retakes (the last
+Use `video-use`. Run its helpers with `~/.venvs/video-use/bin/python` when that file exists
+(the README sets it up), otherwise with `python3`. In order: inventory with `ffprobe`, transcribe, cut pauses and retakes (the last
 take wins), switch between talking head and screen where the speaker refers to the screen, grade,
 subtitles. Keep 0.15 to 0.25 seconds of air between sentences. Never cut inside a word.
 

@@ -34,10 +34,20 @@ claude plugin install answer-me-with-html@explain-ladder
 The last three are the authors' own plugins, installed from their repositories through this
 catalogue, so they update with their upstream.
 
-Needs: Node.js 22 or newer (Archify, HyperFrames), `ffmpeg` and `ffprobe`, Python 3.10 or newer
-for `video-use` (run `pip install -e .` once inside its skill folder), and an ElevenLabs key for
-voice and transcription, read from `ELEVENLABS_API_KEY` or `~/.config/elevenlabs/key` (mode 600).
-Nothing asks for a key in chat.
+Needs: Node.js 22 or newer (Archify, HyperFrames), `ffmpeg` and `ffprobe`, `git-lfs` (the
+HyperFrames repository uses Git LFS, its install fails without it), Python 3.10 or newer for
+`video-use`, and an ElevenLabs key for voice and transcription, read from `ELEVENLABS_API_KEY` or
+`~/.config/elevenlabs/key` (mode 600). Nothing asks for a key in chat.
+
+On macOS with Homebrew:
+
+```
+brew install git-lfs ffmpeg uv && git lfs install
+uv venv ~/.venvs/video-use && uv pip install --python ~/.venvs/video-use requests librosa matplotlib pillow numpy
+```
+
+The Python packages go into their own environment at `~/.venvs/video-use`, outside the plugin
+folder, so a plugin update does not wipe them and the system Python stays untouched.
 
 ## What is inside
 

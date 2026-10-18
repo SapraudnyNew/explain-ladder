@@ -3,4 +3,4 @@ path: .
 commit: 43cfc566833548093455c9d4a46bd69913b7e552
 license: MIT
 fetched: 2026-10-18
-local_edits: description rewritten; install.md key step replaced (no key in chat), plugin note added; helpers/transcribe.py also reads ~/.config/elevenlabs/key; SKILL.md no longer asks for the key in chat; tests, static and poster.html left out
+local_edits: description rewritten; install.md key step replaced (no key in chat), plugin note added; helpers/transcribe.py also reads ~/.config/elevenlabs/key; SKILL.md no longer asks for the key in chat; tests, static and poster.html left out; SKILL.md points helpers at the ~/.venvs/video-use environment

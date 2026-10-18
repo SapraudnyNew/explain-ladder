@@ -1,7 +1,7 @@
 {
   "name": "explain-ladder",
   "description": "Pick the form of an answer (markdown, plain English, diagram, HTML page, video) by one rule and five aliases per level, and produce it: archify for diagrams, video-studio with video-use and HyperFrames for video.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "SapraudnyNew"
   },
