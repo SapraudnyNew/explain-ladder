@@ -61,7 +61,7 @@ First-time install lives in `install.md` (clone, deps, ffmpeg, skill registratio
 
 - `ELEVENLABS_API_KEY` resolves: the environment, `~/.config/elevenlabs/key` (mode 600) or `.env` at the video-use root. If missing, stop and tell the user where to put it. Never ask for the key in chat and never print it.
 - `ffmpeg` + `ffprobe` on PATH.
-- Python deps installed. Inside this plugin they live in `~/.venvs/video-use`: run helpers with `~/.venvs/video-use/bin/python helpers/<name>.py` when it exists, else `uv sync` or `pip install -e .` inside the repo.
+- Python deps installed. Inside this plugin they live in `~/.venvs/video-use`: run helpers through the `video-studio` skill's `scripts/with-env.sh` (`bash <video-studio>/scripts/with-env.sh python helpers/<name>.py`), which puts that environment first on PATH, else `uv sync` or `pip install -e .` inside the repo.
 - Node.js + npm available if the session needs HyperFrames or Remotion slots. HyperFrames currently requires Node.js 22+.
 - `yt-dlp`, HyperFrames, Remotion, Manim installed only on first use.
 - First-use animation setup happens inside the slot directory, never at the video-use repo root. HyperFrames can be invoked with `npx --yes hyperframes ...`; Remotion can be scaffolded with `npx create-video@latest` or installed as a project-local dependency before using its `remotion render` command.

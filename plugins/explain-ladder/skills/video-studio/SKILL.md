@@ -23,8 +23,10 @@ The craft lives in the tools it calls, so read their skills when you reach their
 
 ## Stage 1. Real footage (only when there are clips)
 
-Use `video-use`. Run its helpers with `~/.venvs/video-use/bin/python` when that file exists
-(the README sets it up), otherwise with `python3`. In order: inventory with `ffprobe`, transcribe, cut pauses and retakes (the last
+Use `video-use`. Run every helper through this skill's `scripts/with-env.sh`, for example
+`bash <this skill>/scripts/with-env.sh python <video-use>/helpers/transcribe.py clip.mp4`. The wrapper puts
+`~/.venvs/video-use` first on PATH and loads the ElevenLabs key from its file, so the system Python and
+an empty environment never break a run. In order: inventory with `ffprobe`, transcribe, cut pauses and retakes (the last
 take wins), switch between talking head and screen where the speaker refers to the screen, grade,
 subtitles. Keep 0.15 to 0.25 seconds of air between sentences. Never cut inside a word.
 
@@ -45,8 +47,10 @@ tour, its `product-launch-video`.
 ## Voice
 
 ElevenLabs is the voice. The key comes from `ELEVENLABS_API_KEY` or `~/.config/elevenlabs/key`
-(mode 600); never ask for it in chat and never print it. Generate the voiceover through HyperFrames'
-audio tools (`media-use`), then mix with `hyperframes-audio` (duck the music under the voice). No
+(mode 600); never ask for it in chat and never print it. HyperFrames' audio tools read only the
+environment variable, so run every voice or transcription command through `scripts/with-env.sh`, which
+loads the file without printing it. Generate the voiceover through HyperFrames' audio tools
+(`media-use`), then mix with `hyperframes-audio` (duck the music under the voice). No
 key: use the local voice HyperFrames offers and say the voice is a placeholder.
 
 ## Stage 3. Quality gate, every time
