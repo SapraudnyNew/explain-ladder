@@ -1,0 +1,6 @@
+repo: https://github.com/AbubakrChan/product-launch-motion
+path: .
+commit: b25b1630ecdebfe1fccf513256b2e7b8fd91a2c2
+license: MIT for SKILL.md and references (see NOTICE); examples and legacy left out, the sample films are not MIT
+fetched: 2026-10-18
+local_edits: description rewritten; examples and legacy left out

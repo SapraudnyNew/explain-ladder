@@ -1,0 +1,18 @@
+{
+  "name": "explain-ladder",
+  "description": "Pick the form of an answer (markdown, plain English, diagram, HTML page, video) by one rule and five aliases per level, and produce it: archify for diagrams, video-studio with video-use and HyperFrames for video.",
+  "version": "0.1.0",
+  "author": {
+    "name": "SapraudnyNew"
+  },
+  "repository": "https://github.com/SapraudnyNew/explain-ladder",
+  "license": "MIT",
+  "keywords": [
+    "explain",
+    "diagram",
+    "html",
+    "video",
+    "ste100",
+    "hyperframes"
+  ]
+}

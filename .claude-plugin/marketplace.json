@@ -1,0 +1,47 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "explain-ladder",
+  "description": "Five levels for presenting an answer: markdown, plain English, diagram, HTML page, video. One plugin of our own plus the upstream plugins it calls.",
+  "owner": {
+    "name": "SapraudnyNew"
+  },
+  "plugins": [
+    {
+      "name": "explain-ladder",
+      "source": "./plugins/explain-ladder",
+      "description": "The ladder rule, level aliases, video-studio, and vendored MIT skills: archify, video-use, product-launch-motion, motion-design.",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
+      "name": "hyperframes",
+      "source": {
+        "source": "github",
+        "repo": "heygen-com/hyperframes"
+      },
+      "description": "HyperFrames by HeyGen: write HTML, render video. Upstream plugin, Apache-2.0, installed from its own repository.",
+      "license": "Apache-2.0",
+      "category": "productivity"
+    },
+    {
+      "name": "gsap-skills",
+      "source": {
+        "source": "github",
+        "repo": "greensock/gsap-skills"
+      },
+      "description": "Official GSAP skills by GreenSock: timelines, easing, ScrollTrigger. Upstream plugin, MIT.",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
+      "name": "answer-me-with-html",
+      "source": {
+        "source": "github",
+        "repo": "QingYunA/answer-me-with-html"
+      },
+      "description": "Answer a hard question as one HTML page with an STE writing check. Upstream plugin by QingYunA, MIT.",
+      "license": "MIT",
+      "category": "productivity"
+    }
+  ]
+}

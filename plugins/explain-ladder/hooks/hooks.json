@@ -1,0 +1,16 @@
+{
+  "description": "Explain ladder: when the prompt contains a level alias, tell the agent which level and skill to use.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/ladder-alias.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

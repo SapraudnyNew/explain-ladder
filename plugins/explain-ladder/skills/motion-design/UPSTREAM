@@ -1,0 +1,6 @@
+repo: https://github.com/howseen-ai/claude-motion-design
+path: skill/motion-design
+commit: 3d90d349ef3fdde9b7e89de4df4a2159c9e8697f
+license: MIT
+fetched: 2026-10-18
+local_edits: description rewritten to narrow its trigger
