@@ -115,7 +115,13 @@ const browser = await chromium.launch({ executablePath: CHROME, headless: true }
     (function f() {
       s.push(+v.currentTime.toFixed(4));
       if (++n < 70) requestAnimationFrame(f);
-      else res({ s, target: clip.target * (v.duration || 1), dur: v.duration, lerp: clip.lerp });
+      else {
+        // local edit 2026-10-22: the rate the engine should use, read from the same attributes it reads
+        // (clip first, then the nearest ancestor carrying data-sc-lerp), else the page rate it reports.
+        const rate = (el) => { const x = parseFloat(el && el.getAttribute && el.getAttribute("data-sc-lerp")); return isNaN(x) || x <= 0 ? 0 : Math.min(1, Math.max(0.02, x)); };
+        const expected = rate(v) || rate(v.parentElement && v.parentElement.closest("[data-sc-lerp]")) || sc.lerp || 0.18;
+        res({ s, target: clip.target * (v.duration || 1), dur: v.duration, lerp: clip.lerp, expected });
+      }
     })();
   }), { y: B });
 
@@ -130,7 +136,8 @@ const browser = await chromium.launch({ executablePath: CHROME, headless: true }
   ok("playhead does not overshoot", overshoot <= 0.02, `max excess ${overshoot.toFixed(4)}s`);
   ok("playhead converges on the target", Math.abs(end - trace.target) < 0.05,
     `residual ${Math.abs(end - trace.target).toFixed(4)}s`);
-  ok("lerp rate is a working value (0.18 default, data-sc-lerp may override)", trace.lerp > 0 && trace.lerp <= 1, `lerp ${trace.lerp}`);
+  ok("lerp rate is the configured one (data-sc-lerp, else 0.18)", Math.abs(trace.lerp - trace.expected) < 1e-9,
+    `lerp ${trace.lerp}, expected ${trace.expected}`);
 
   // ---- deadband: no seek thrash while the page is still -------------------
   await page.waitForTimeout(900);

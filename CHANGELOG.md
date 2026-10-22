@@ -9,8 +9,8 @@ Versions of the `explain-ladder` plugin. Dates are UTC.
   kie.ai) and where keys are read from.
 - Added `SECURITY.md`, this changelog and a root `.gitignore` (evaluation results stay out of git).
 - `scroll-craft`: narrower description; `scripts/worldflight-assert.mjs` finds the live instance
-  through `ScrollCraft.instances` and accepts a `data-sc-lerp` override. Both noted in its
-  `UPSTREAM`.
+  through `ScrollCraft.instances`, accepts a `data-sc-lerp` override and checks that the engine
+  uses the configured rate. All noted in its `UPSTREAM`.
 
 ## 0.2.0, 2026-10-18
 
