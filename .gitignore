@@ -1,0 +1,16 @@
+# Trigger evaluation output (evals/run.sh)
+evals/results/
+
+# Local secrets and environments
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python, Node and OS clutter
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.DS_Store

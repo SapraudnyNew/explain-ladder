@@ -8,6 +8,9 @@ understand: controlled English, diagrams, HTML pages, explainer videos. This rep
 markdown as level 0, the aliases, and the tools that produce each level. It is not affiliated with
 or endorsed by him.
 
+**Status: shared as is, read only.** Issues and pull requests are not taken. Fork it and change
+what you need under the MIT licence. Security reports: [SECURITY.md](SECURITY.md).
+
 ## The rule
 
 Use the lowest level that answers the question fully. Go higher only when it cuts the reader's
@@ -65,10 +68,21 @@ folder, so a plugin update does not wipe them and the system Python stays untouc
 Vendored skills keep their own `LICENSE` and notices, and an `UPSTREAM` file with the commit taken
 and every local edit. Credits and licence terms: [NOTICE.md](NOTICE.md).
 
-## Privacy
+## Costs and privacy
 
-`video-use` and the ElevenLabs voice send audio to ElevenLabs. `video-studio` asks before any
-client or third-party recording leaves the machine.
+Levels 0 to 3 run locally and need no paid key: markdown, plain English, `archify` diagrams and
+HTML pages. Two parts can spend your money and send data to a cloud service:
+
+- **ElevenLabs** (level 4): voiceover and transcription in `video-studio` and `video-use` bill your
+  ElevenLabs account by the minute and send the audio to ElevenLabs. `video-studio` states the cost
+  before a render and asks before any client or third-party recording leaves the machine. Without
+  a key, HyperFrames uses a local placeholder voice.
+- **kie.ai** (optional, in `scroll-craft`): generated photoreal images and footage are paid per
+  asset and follow kie.ai's terms. Supply your own photos and footage and nothing is bought.
+
+Keys are read from environment variables or a file: `ELEVENLABS_API_KEY` or
+`~/.config/elevenlabs/key`, and `KIE_AI_API_KEY` or the `.env` file of your project (keep that file
+out of git). Nothing in this repository asks for a key in chat or stores one.
 
 ## Licence
 

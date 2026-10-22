@@ -4,4 +4,5 @@ commit: 75d81f74e83692add18cd7a8a8e078b8a887a579
 plugin_version: 0.3.1
 licence: MIT (LICENSE copied from the repository root)
 fetched: 2026-10-18
-local_edits: none
+local_edits: yes
+notes: description rewritten to 400; scripts/worldflight-assert.mjs reads the instance from ScrollCraft.instances and accepts a data-sc-lerp override (Codex on infra#405)
